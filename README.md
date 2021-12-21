@@ -24,9 +24,10 @@ Context:
   One of these websites, PriceCharting.com, will serve as the source for our live market data that we can then assign to the individual items in our provided collection dataset.
   
   There are a number of shortfalls in the project for relying on an external website for live market data:
+  
     1. Market prices of games with low transaction volume will have less accurate pricing.
-    2. PriceCharting.com and other second-hand market value-summarizers only pull from a limited amount of marketplaces, in PriceCharting.com's case: only eBay, Gamestop, and Amazon.
-    3. We are relying on PriceCharting.com's backend to accurately and consistently capture live transactions from marketplaces. There could be missed transactions that should have moved the price.
+    2. PriceCharting.com only pulls from a limited amount of marketplaces and their public transactions: only eBay, Gamestop, and Amazon.
+    3. We are relying on PriceCharting.com's backend to accurately and consistently capture transactions from marketplaces.
     4. We are assuming PriceCharting.com's system for calculating the market price of games is the best. We don't know how they are averaging recent and historical transactions into one number.
   
     
