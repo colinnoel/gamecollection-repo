@@ -1,6 +1,4 @@
-"""
-author: Colin Noel
-"""
+# author: Colin Noel
 
 from bs4 import BeautifulSoup
 import requests
