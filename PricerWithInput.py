@@ -1,5 +1,5 @@
 """
-@author: Colin Noel
+author: Colin Noel
 """
 
 from bs4 import BeautifulSoup
@@ -27,7 +27,6 @@ g = game_name.replace(" ", "+")
 # Exclude Variants?: '&exclude-variants=true'
 # Price Query or Marketplace: '&type=prices'
 # Sort By: '&sort=name'
-
 # ---                                  ---
 
 # Use a base URL to give us the best chance of finding our desired game at the top of the results
