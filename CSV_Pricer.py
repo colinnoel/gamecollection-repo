@@ -18,7 +18,7 @@ consoleIDs = {"nintendo ds":"G5","nintendo 3ds":"G39","nintendo switch":"G59",
 cID = consoleIDs[console_name.lower()]
 g = game_name.replace(" ", "+")
 
-# --- Pricecharting.com URL Parameters ---
+# --- Pricecharting.com URL Parameter: Example ---
 
 # Game Name: 'q=pokemon+diamond'
 # Game Region: '&region-name=ntsc'
