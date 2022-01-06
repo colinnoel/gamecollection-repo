@@ -54,13 +54,13 @@ newPrice = firstRow.find("td",class_="price numeric new_price")
 if cibPrice != None: 
     
     if game_condition == "cib":
-        print("Current CIB Price: " + cibPrice.get_text())
+        print(F"Current CIB Price: {cibPrice.get_text()}")
         
     elif game_condition == "loose":
-        print("Current Loose Price: " + loosePrice.get_text()) 
+        print(F"Current Loose Price: {loosePrice.get_text()}") 
         
     else:
-        print("Current New Price: " + newPrice.get_text()) 
+        print(F"Current New Price: {newPrice.get_text()}") 
     
     
 # Under outcome (2) cibPrice will return None, since the product page has a different element for a game's cib price
@@ -77,24 +77,15 @@ else:
     
 
     if game_condition == "cib":
-        print("Current CIB Price: " + ProdPgCibPrice.get_text().strip())
+        print(F"Current CIB Price: {ProdPgCibPrice.get_text().strip()}")
         
     elif game_condition == "loose":
-        print("Current Loose Price: " + ProdPgLoosePrice.get_text().strip())
+        print(F"Current Loose Price: {ProdPgLoosePrice.get_text().strip()}")
         
     else:
-        print("Current New Price: " + ProdPgNewPrice.get_text()) 
-
-# def readGameCollectionCSV(path, prices):
-
-#     with open(currentCSVPath, 'r') as csv_file:
-#         csv_reader = csv.reader(csv_file)
-
-#         for line in csv_reader:
-#             print(line)
+        print(F"Current New Price: {ProdPgNewPrice.get_text()}") 
 
 
-# currentCSVPath = 
 
 
 print()  

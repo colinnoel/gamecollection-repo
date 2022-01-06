@@ -12,7 +12,7 @@ print()
 consoleIDs = {"nintendo ds":"G5","nintendo 3ds":"G39","nintendo switch":"G59",
               "xbox 360":"G10","playstation 4":"G53","playstation 3":"G12"
               ,"playstation 2":"G7","playstation 1":"G6","nintendo wii":"G11",
-              "nintendo wii U":"G47","gameboy advance":"G1"}
+              "nintendo wii U":"G47","gameboy advance":"G1","nintendo 64":"G4"}
 
 cID = consoleIDs[console_name.lower()]
 g = game_name.replace(" ", "+")

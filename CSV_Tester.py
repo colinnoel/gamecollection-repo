@@ -5,13 +5,17 @@ currentCSVPath = r'C:\\Users\\cn\\OneDrive\\Desktop\\Python Projects\\game colle
 
 endCSVPath = r'C:\\Users\\cn\\OneDrive\\Desktop\\Python Projects\\game collection project\\' + "Game Collection Example 2" + ".csv"
 
-def readGameCollectionCSV(path):
+def readCSV(path):
     
     with open(currentCSVPath, 'r') as csv_file:
-        csv_reader = csv.reader(csv_file)
+        csv_reader = csv.reader(csv_file) #delimiter is implied to be ','
+        line_count = 0
 
         for line in csv_reader:
             print(line)
+            line_count += 1
+
+        print(f"You have {line_count} games in your collection!")
 
 def writePricesToCSV(path, prices):
 
@@ -22,4 +26,4 @@ def writePricesToCSV(path, prices):
         for line in prices:
             csv_writer.writerow([row["System"], row["Title"], row["Condition"], row["Current Market Value"]])
 
-readGameCollectionCSV(currentCSVPath)
+readCSV(currentCSVPath)
