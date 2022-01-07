@@ -1,6 +1,5 @@
 import csv
 
-from MainClass import getGamePrice
 
 class CSV_Reader:
     
