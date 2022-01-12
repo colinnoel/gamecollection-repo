@@ -10,6 +10,15 @@ import CSV_toDict
 # g.show()
 # print(g.getGamePrice())
 
+def main():
+    
+    collection = GameCollection(r'C:\\Users\\cn\\OneDrive\\Desktop\\Python Projects\\game collection project\\' + "Game Collection Example 1" + ".csv", r'C:\\Users\\cn\\OneDrive\\Desktop\\Python Projects\\game collection project\\' + "Game Collection Example 2" + ".csv")
+    GameCollection.show_number_of_games
+
+if __name__ == "__main__":
+    main()
+
+
 class GameCollection:
     number_of_games = 0
     total_value = 0
@@ -27,7 +36,5 @@ class GameCollection:
     def show_total_value(cls):
         print(cls.total_value)
 
-collection = GameCollection(r'C:\\Users\\cn\\OneDrive\\Desktop\\Python Projects\\game collection project\\' + "Game Collection Example 1" + ".csv", r'C:\\Users\\cn\\OneDrive\\Desktop\\Python Projects\\game collection project\\' + "Game Collection Example 2" + ".csv")
 
-GameCollection.show_number_of_games
 

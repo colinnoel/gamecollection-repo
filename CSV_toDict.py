@@ -1,6 +1,5 @@
 import csv
 from GamePricer import Game
-from typing import List, Dict
 
 class convertToDict:
     
@@ -31,6 +30,7 @@ class convertToDict:
     def dictWriterCSV(self): 
         
         game_count = 0
+        total_value = float(0)
 
         with open(self.read_path,'r') as csv_file:
             csv_reader = csv.DictReader(csv_file)
@@ -56,10 +56,12 @@ class convertToDict:
 
 # Notes from 1/7 - Trying to understand why my CSV writer is not writing correctly^
 
+g = Game("Pokemon Diamond","nintendo DS","cib")
+g.show() 
+print(g.getGamePrice())
 
-c = convertToDict(r'C:\\Users\\cn\\OneDrive\\Desktop\\Python Projects\\game collection project\\' + "Game Collection Example 1" + ".csv", r'C:\\Users\\cn\\OneDrive\\Desktop\\Python Projects\\game collection project\\' + "Game Collection Example 2" + ".csv")
-# c.dictReaderCSV()
-c.dictWriterCSV()
+# c = convertToDict(r'C:\\Users\\cn\\OneDrive\\Desktop\\Python Projects\\game collection project\\' + "Game Collection Example 1" + ".csv", r'C:\\Users\\cn\\OneDrive\\Desktop\\Python Projects\\game collection project\\' + "Game Collection Example 2" + ".csv")
+# c.dictWriterCSV()
 
 
 

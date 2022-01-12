@@ -59,7 +59,6 @@ class Game:
             else: print("Please input a correctly syntaxed game condition")
 
 
-
-# g = Game("pokemon stadium","nintendo 64","cib")
+# g = Game("Pokemon Platinum","nintendo DS","cib")
 # g.show()
 # print(g.getGamePrice())
