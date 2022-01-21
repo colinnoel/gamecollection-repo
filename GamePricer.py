@@ -3,10 +3,11 @@ import requests
 
 class Game:
 
-    def __init__(self, title, console, condition):
+    def __init__(self, title, console, condition, current_price):
         self.title = title
         self.console = console
         self.condition = condition
+        self.current_price = current_price
         
     
     def show(self):
@@ -59,6 +60,6 @@ class Game:
             else: print("Please input a correctly syntaxed game condition")
 
 
-# g = Game("Pokemon Platinum","nintendo DS","cib")
+# g = Game("Pokemon Platinum","nintendo DS","cib", 0)
 # g.show()
 # print(g.getGamePrice())

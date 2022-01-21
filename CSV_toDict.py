@@ -3,8 +3,6 @@ from GamePricer import Game
 
 class convertToDict:
     
-    
-
     def __init__(self, read_path, write_path):
         self.read_path = read_path
         self.write_path = write_path
@@ -35,34 +33,46 @@ class convertToDict:
         with open(self.read_path,'r') as csv_file:
             csv_reader = csv.DictReader(csv_file)
 
-
             with open(self.read_path, 'w', newline = '') as new_file:
                 columns = ["Console","Title","Condition","Current Price"]
                 csv_writer = csv.DictWriter(new_file, fieldnames = columns)
                 csv_writer.writeheader()
 
-                for row in csv_reader:
-                    
-                    # g = Game(row["Title"], row["Console"], row["condition"])
-                    # row["Current Price"] = g.getGamePrice()
-                    # row["Current Price"].append(g)
+                for row in csv_reader: 
+                    #(1) for each dictionary/row, define them as Game objects
+                    g = Game("Title","Console","Condition") #why cant i define Game here?
                     game_count += 1
-                    csv_writer.writerow([row["Console"],row["Title"],row["Condition"],row["Current Price"]])
+                    
+                    for row in csv_reader:
+                        csv_writer.writerow([row["Console"],row["Title"],row["Condition"],row["Current Price"]])
 
                 print(f'You have {game_count} games in your collection!')
                      
-
-                    
+# row["Current Price"] = g.getGamePrice()
+# row["Current Price"].append(g)
 
 # Notes from 1/7 - Trying to understand why my CSV writer is not writing correctly^
 
-g = Game("Pokemon Diamond","nintendo DS","cib")
-g.show() 
-print(g.getGamePrice())
+gameExample = Game("Pokemon Diamond","nintendo DS","cib")
+gameExample.show() 
+print(gameExample.getGamePrice())
 
-# c = convertToDict(r'C:\\Users\\cn\\OneDrive\\Desktop\\Python Projects\\game collection project\\' + "Game Collection Example 1" + ".csv", r'C:\\Users\\cn\\OneDrive\\Desktop\\Python Projects\\game collection project\\' + "Game Collection Example 2" + ".csv")
-# c.dictWriterCSV()
+testReadPath = r'C:\\Users\\cn\\OneDrive\\Desktop\\Python Projects\\game collection project\\' + "Game Collection Example 1" + ".csv"
+testWritePath = r'C:\\Users\\cn\\OneDrive\\Desktop\\Python Projects\\game collection project\\' + "Game Collection Example 3" + ".csv"
 
+listOfGame = ["Super Smash Bros. Melee", "World of Warcraft", "Call of Duty: Modern Warfare", "Super Smash Bros. Melee [Best Seller]"]
+priceDictList = []
+
+# Notes from 1/20 - Writing out what next steps I need to do, below. 
+# currently working from Convert_Row_of_CSV... File
+
+# I think i need to (1) define the first Dictionary/row in the CSV as a Game object.
+# (2) Append the getGamePrice return value to the 'Current Price' key on that Game object
+# Then (3) loop through each Dictionary/row in the CSV
+# (4) write each dictionary/row into a new CSV
+
+readExample = convertToDict(testReadPath, testWritePath)
+readExample.dictReaderCSV()
 
 
 # gameList = c.dictConverterCSV()
