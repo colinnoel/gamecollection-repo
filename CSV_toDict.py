@@ -68,7 +68,7 @@ priceDictList = []
 
 # I think i need to (1) define the first Dictionary/row in the CSV as a Game object.
 # (2) Append the getGamePrice return value to the 'Current Price' key on that Game object
-# Then (3) loop through each Dictionary/row in the CSV
+#  Then (3) loop through each Dictionary/row in the CSV
 # (4) write each dictionary/row into a new CSV
 
 readExample = convertToDict(testReadPath, testWritePath)
