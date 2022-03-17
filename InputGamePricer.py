@@ -28,7 +28,7 @@ g = game_name.replace(" ", "+")
 # ---                                  ---
 
 # Use a base URL to give us the best chance of finding our desired game at the top of the results
-# Customize the URL with our game name and console ID varialbes
+# Customize the URL with our game name and console ID variables
 
 URL = "https://www.pricecharting.com/search-products?q=" + g.lower() + "&console-uid=" + cID + "&type=prices&sort=popularity&broad-category=video-games&console-uid=&region-name=ntsc&exclude-variants=false"
 
