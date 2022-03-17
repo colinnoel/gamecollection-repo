@@ -3,11 +3,11 @@ import requests
 
 class Game:
 
-    def __init__(self, title, console, condition, current_price):
+    def __init__(self, title, console, condition, game_price_url,):
         self.title = title
         self.console = console
         self.condition = condition
-        self.current_price = current_price
+        self.game_price_url = game_price_url
         
     
     def show(self):
@@ -39,9 +39,9 @@ class Game:
 
         if cibPrice != None: 
     
-            if self.condition == "cib": return cibPrice.get_text()
-            elif self.condition == "loose": return loosePrice.get_text()
-            elif self.condition == "new": return newPrice.get_text()
+            if self.condition == "cib": return [cibPrice.get_text().strip(),url]
+            elif self.condition == "loose": return [loosePrice.get_text().strip(),url]
+            elif self.condition == "new": return [newPrice.get_text().strip(),url]
             else: print("Please input a correctly syntaxed game condition")
         
         else:
@@ -54,12 +54,12 @@ class Game:
             ProdPgNewID = firstRow.find("td",id="new_price")    
             ProdPgNewPrice = ProdPgNewID.find("span",class_="price js-price")
 
-            if self.condition == "cib": return ProdPgCibPrice.get_text().strip()
-            elif self.condition == "loose": return ProdPgLoosePrice.get_text().strip()
-            elif self.condition == "new": return ProdPgNewPrice.get_text()
+            if self.condition == "cib": return [ProdPgCibPrice.get_text().strip(),url]
+            elif self.condition == "loose": return [ProdPgLoosePrice.get_text().strip(),url]
+            elif self.condition == "new": return [ProdPgNewPrice.get_text().strip(),url]
             else: print("Please input a correctly syntaxed game condition")
 
 
-# g = Game("Pokemon Platinum","nintendo DS","cib", 0)
-# g.show()
-# print(g.getGamePrice())
+g = Game("Pokemon Platinum","nintendo DS","cib","")
+g.show()
+print(g.getGamePrice())
