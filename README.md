@@ -1,16 +1,27 @@
 # Game Collection Project Summary
 
-The primary goal of this project is to:
+<h3>The Problem:</h3>
+Do you have a cardboard box of old video games in your garage? 
+Do you see articles online about someone finding a $10,000 game in their attic? Do you ever wonder if that could be you?
+Well, unfortunately, that's quite unlikely. But there is definitely a chance that your collection is worth something.
 
-  1. Pull current and relatively accurate market prices of physical media video games 
-  2. Summarize and assign these market prices to a given game collection dataset
-  3. Analyze price fluctuations and trends over time
+Now how would you actually go about pricing your collection? 
+One way to go about it is searching eBay or Amazon for each game, and looking at recently sold listings.
+That could work, but you would spend alot of time on this.
+
+**Even if you know where to look, researching and pricing each video game in your collection is tedious and tiresome.**
+
+<h3>Goal:</h3>
+
+1. Pull current and relatively accurate market prices of physical media video games 
+2. Summarize and assign these market prices to a given game collection dataset
+3. Analyze price fluctuations and trends over time
   
-The primary use case of this project is for someone who is:
+<h3>Primary Use Case:</h3>
 
-  1. Looking to easily estimate the value of their entire collection on any given date
-  2. Tired of manually logging the value of their collection
-  3. Interested in making buying/selling decisions based on pricing trends and analysis
+1. Looking to easily estimate the value of their entire collection on any given date
+2. Tired of manually logging the value of their collection
+3. Interested in making buying/selling decisions based on pricing trends and analysis
 
 
 Context:
