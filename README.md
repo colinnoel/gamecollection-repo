@@ -44,7 +44,7 @@ Regardless of these challenges, I underlying goal of this project is to provide 
 ---
 
 <h2>Future Goals:</h2>
-1. Use image recognition to develop a moblile app that scans video game covers and provides you with a live market price. Could be marketed to resellers.
+1. Use image recognition to develop a moblile app that scans video game covers and provides you with a live market price. Could be marketed to resellers.<br>
 2. Create a webapp that prices your games and can notify you with pricing trends and analysis
 
 
