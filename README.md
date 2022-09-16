@@ -1,13 +1,13 @@
 # Game Collection Project Summary
 
 <h3>The Problem:</h3>
-Do you have a cardboard box of old video games in your garage? 
-Do you see articles online about someone finding a $10,000 game in their attic? Do you ever wonder if that could be you?
-Well, unfortunately, that's quite unlikely. But there is definitely a chance that your collection is worth something.
+<p> Do you have a cardboard box of old video games in your garage?<br>
+Do you see articles online about someone finding a $10,000 game in their attic? Do you ever wonder if that could be you?<br>
+Well, unfortunately, that's quite unlikely. But there is definitely a chance that your collection is worth something.</p>
 
-Now how would you actually go about pricing your collection? 
-One way to go about it is searching eBay or Amazon for each game, and looking at recently sold listings.
-That could work, but you would spend alot of time on this.
+<p>Now how would you actually go about pricing your collection? <br>
+One way to go about it is searching eBay or Amazon for each game, and looking at recently sold listings.<br>
+That could work, but you would spend alot of time on this.</p>
 
 **Even if you know where to look, researching and pricing each video game in your collection is tedious and tiresome.**
 
