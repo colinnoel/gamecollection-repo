@@ -6,11 +6,11 @@ import requests
 
 class Game:
 
-    def __init__(self, title, console, condition, game_price_url,):
+    def __init__(self, title, console, condition):
         self.title = title
         self.console = console
         self.condition = condition
-        self.game_price_url = game_price_url
+        
         
     
     def show(self):
@@ -61,9 +61,9 @@ class Game:
         # Under outcome (1), we find cibPrice from the element
         if cibPrice != None: 
     
-            if self.condition == "cib": return [cibPrice.get_text().strip(),url]
-            elif self.condition == "loose": return [loosePrice.get_text().strip(),url]
-            elif self.condition == "new": return [newPrice.get_text().strip(),url]
+            if self.condition == "cib": return float(cibPrice.get_text().strip()[1:])
+            elif self.condition == "loose": return float(loosePrice.get_text().strip()[1:])
+            elif self.condition == "new": return float(newPrice.get_text().strip()[1:])
             else: print("Please input a correctly syntaxed game condition")
         
         # Under outcome (2) below, cibPrice will return None, since the product page has a 
@@ -79,13 +79,13 @@ class Game:
             ProdPgNewID = firstRow.find("td",id="new_price")    
             ProdPgNewPrice = ProdPgNewID.find("span",class_="price js-price")
 
-            if self.condition == "cib": return [ProdPgCibPrice.get_text().strip(),url]
-            elif self.condition == "loose": return [ProdPgLoosePrice.get_text().strip(),url]
-            elif self.condition == "new": return [ProdPgNewPrice.get_text().strip(),url]
+            if self.condition == "cib": return float(ProdPgCibPrice.get_text().strip()[1:])
+            elif self.condition == "loose": return float(ProdPgLoosePrice.get_text().strip()[1:])
+            elif self.condition == "new": return float(ProdPgNewPrice.get_text().strip()[1:])
             else: print("Please input a correctly syntaxed game condition")
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-g = Game("Pokemon Platinum","nintendo DS","cib","")
-g.show()
-print(g.getGamePrice())
+# g = Game("Pokemon Platinum","nintendo DS","cib")
+# g.show()
+# print(g.getGamePrice())

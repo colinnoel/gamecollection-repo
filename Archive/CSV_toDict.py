@@ -1,5 +1,5 @@
 import csv
-from GamePricer import Game
+from Archive.IndividualGamePricer import Game
 
 class convertToDict:
     

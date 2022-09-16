@@ -1,14 +1,7 @@
 
 import csv
-from GamePricer import Game
-import CSV_Writer
-import CSV_Reader
-import CSV_toDict
-import CSV_toDict
+from Archive.IndividualGamePricer import Game
 
-# g = Game("pokemon stadium","nintendo 64","cib")
-# g.show()
-# print(g.getGamePrice())
 
 def main():
     
