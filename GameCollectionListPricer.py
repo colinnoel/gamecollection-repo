@@ -1,6 +1,9 @@
 from IndividualGamePricerNoURL import Game
-from GameCollection import GameCollection
+from datetime import datetime
+#from GameCollection import GameCollection
 
+now = datetime.now()
+dt_string = now.strftime("%m/%d/%Y %H:%M")
 game_count = 0
 total_game_collection_value = float(0)
 
@@ -35,11 +38,11 @@ for game in example_game_list:
     # Update the game's price value using our getGamePrice method
     game['Game Price'] = gameObject.getGamePrice()
 
-    game_count += 0
+    game_count += 1
     total_game_collection_value += game['Game Price']
     
 
 
-print(example_game_list)
+print(f'Game List: {example_game_list}')
 print("\n")
-print(total_game_collection_value)
+print(f'As of: {dt_string}, your {game_count} game collection has a value of: ${total_game_collection_value}')
