@@ -1,5 +1,6 @@
 from IndividualGamePricerNoURL import Game
 from datetime import datetime
+import pandas as pd
 #from GameCollection import GameCollection
 
 now = datetime.now()
@@ -7,6 +8,18 @@ dt_string = now.strftime("%m/%d/%Y %H:%M")
 game_count = 0
 total_game_collection_value = float(0)
 
+###################################################
+
+url = 'C:\\Users\\cn\\OneDrive\\Desktop\\Python Projects\\game collection project\\' + "Game Collection Example 1" + ".csv"
+
+
+# Read the CSV into a pandas data frame (df)
+df = pd.read_csv(url, delimiter=',')
+
+# export it as a list of dicts
+example_game_list = df.to_dict('records')
+
+####################################################
 
 game1 = {
     'Title' : 'Pokemon Platinum',
@@ -28,9 +41,9 @@ game3 = {
     'Condition' : 'cib',
     'Game Price' : 0.00
 }
-# Our example game collection is a List, with dictionaries (games) inside
-example_game_list = [game1, game2, game3]
 
+# Our example game collection is a List, with dictionaries (games) inside
+# example_game_list = [game1, game2, game3]
 
 for game in example_game_list:
     # Instantiate a gameObject from the IndividualGamePricerNoURL file, by filling in its parameters with our game{} dictionary
