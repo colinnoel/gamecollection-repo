@@ -75,13 +75,13 @@ readExample = convertToDict(testReadPath, testWritePath)
 readExample.dictReaderCSV()
 
 
-gameList = c.dictConverterCSV()
+# gameList = c.dictConverterCSV()
 
-print(gameList)
+# print(gameList)
 
-priceDictList = []
+# priceDictList = []
 
-for game in gameList:
-    priceDictList.append(getGamePrice())
+# for game in gameList:
+#     priceDictList.append(getGamePrice())
 
-c.writePricesToCSV()
+# c.writePricesToCSV()
