@@ -38,7 +38,7 @@ class CSV_Reader:
 
 
 
-c = CSV_Reader(r'C:\\Users\\cn\\OneDrive\\Desktop\\Python Projects\\game collection project\\' + "Game Collection Example 1" + ".csv")
+c = CSV_Reader(r'C:\\Users\\cn\\OneDrive\\Desktop\\Python Projects\\game collection project\\' + "Game Collection Example 3" + ".csv")
 
 #c.readCSV()
 c.dictReaderCSV()
